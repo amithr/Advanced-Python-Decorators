@@ -1,16 +1,12 @@
-def do_twice(func):
-    def wrapper_do_twice():
-        func()
-        func()
-    return wrapper_do_twice
+def decorator_with_arguments(function):
+    def wrapper_accepting_arguments(arg1, arg2):
+        print("My arguments are: {0}, {1}".format(arg1,arg2))
+        function(arg1, arg2)
+    return wrapper_accepting_arguments
 
-def do_twice(func):
-    def wrapper_do_twice(*args, **kwargs):
-        func(*args, **kwargs)
-        return func(*args, **kwargs)
-    return wrapper_do_twice
 
-@do_twice
-def return_greeting(name):
-    print("Creating greeting")
-    return f"Hi {name}"
+@decorator_with_arguments
+def cities(city_one, city_two):
+    print("Cities I love are {0} and {1}".format(city_one, city_two))
+
+cities("Nairobi", "Accra")
