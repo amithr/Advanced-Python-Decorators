@@ -16,6 +16,9 @@ def waste_some_time(num_times):
     for _ in range(num_times):
         sum([i**2 for i in range(10000)])
 
+# Execute wrapper_timer
+waste_some_time(5)
+
 def slow_down(function):
     """Sleep 1 second before calling the function"""
     def wrapper_slow_down(*args):

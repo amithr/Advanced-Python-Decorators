@@ -21,4 +21,5 @@ def do_twice(func):
 def say_good_bye():
     print("Good Bye!")
 
+# This executes the inner, wrapper_do_twice function
 say_good_bye()

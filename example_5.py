@@ -1,3 +1,6 @@
+
+# When using a decorator parameter, you need to have an inner
+# decorator function in addition to the external decorator function
 def repeat_decorator(num_repeats = 2):
     # repeat_decorator should return a function that's a decorator
     def inner_decorator(function):
